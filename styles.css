@@ -1,0 +1,546 @@
+body {
+  margin: 0%;
+  background: rgb(10, 25, 47);
+  background: linear-gradient(
+    180deg,
+    rgba(10, 25, 47, 1) 51%,
+    rgba(5, 120, 153, 1) 90%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+html {
+  scroll-behavior: smooth;
+}
+/* This is the Start for Navigation Bar Styling */
+#logo img {
+  width: 60px;
+}
+.nav_links {
+  list-style: none;
+}
+.nav_links > li {
+  display: inline-block;
+  padding: 0px 10px;
+}
+.nav_links > li a {
+  transition: all 0.3s ease 0s;
+  padding: 10px;
+  color: #b8bfd3;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+.nav_links > li > a:hover {
+  color: #3d9d90;
+  border: 1px solid;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 5%;
+  height: 20px;
+  background-color: rgba(10, 25, 47, 0.9); /* Add this line */
+  box-shadow: 0 4px 8px 2px rgb(20, 38, 66);
+  position: fixed;
+  width: 90%;
+  top: 0;
+  z-index: 2000;
+  transition: background-color 0.3s ease; /* For Smooth transition */
+  /* z-index is to position the element where it is being stacked. */
+}
+@media(max-width: 40em){
+  header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    height: 80px;
+  }
+  .nav_links > li {
+    display: inline-block;
+    padding-top: 20px;
+  }
+}
+/* This is the End for Navigation Bar Styling */
+/* Keyframes for slide-in animation for Introduction Section*/
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* End of Keyframes for slide-in animation for Introduction Section */
+/* This is the Start for Introduction Section Styling */
+.intro-section {
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+}
+#my-photo {
+  width: 500px;
+  padding-right: 100px;
+  animation: slideInFromLeft 1.5s ease-in-out; /* Apply animation to intro-section elements */
+}
+.introduction h2,
+.introduction h1,
+.introduction a,
+.intro-icons {
+  animation: slideInFromLeft 1.5s ease-in-out; /* Apply animation to intro-section elements */
+}
+.intro-section h1,
+h2 {
+  font-size: 3rem;
+  font-family: "Open Sans", sans-serif;
+}
+.intro-section h2 {
+  color: #3d9d90;
+}
+#my-name {
+  color: #b8bfd3;
+}
+#title {
+  color: #8892b0;
+  font-family: "Roboto Slab", serif;
+}
+.introduction .intro-buttons {
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid #3d9d90;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  color: #3d9d90;
+  animation: slideInFromLeft 1.5s ease-in-out; /* Apply animation to intro-section elements */
+}
+.introduction .intro-buttons:hover {
+  background-color: #3d9d90;
+  color: #010101;
+}
+.intro-icons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 70px;
+  gap: 40px;
+  animation: slideInFromLeft 1.5s ease-in-out; /* Apply animation to intro-section elements */
+}
+.icons {
+  width: 50px;
+  animation: slideInFromLeft 1.5s ease-in-out; /* Apply animation to intro-section elements */
+  transition: transform 0.5s ease;
+}
+.icons:hover {
+  transform: scale(1.4);
+}
+@media (max-width: 62em) {
+  #my-photo {
+    width: 70%;
+    padding: 0%;
+  }
+  .intro-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .intro-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 70px;
+    gap: 40px;
+  }
+}
+/* This is the End for Introduction Section Styling */
+/* This is the Start for About Me Section Styling */
+.main-container-for-aboutme {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px;
+  padding-bottom: 90px;
+  color: #b8bfd3;
+  font-family: "Open Sans", sans-serif;
+}
+.main-container-for-aboutme h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #b8bfd3;
+  margin-top: 100px;
+}
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  border: 2px solid #3d9d90;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+  flex: 1;
+}
+.about-me h2 {
+  font-size: 26px;
+}
+.about-me p {
+  color: #8892b0;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.about-me a {
+  color: #3d9d90;
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.skills img {
+  width: 60px;
+  margin: 10px;
+  transition: transform 0.5s ease;
+  margin-bottom: 50px;
+}
+.skills img:hover {
+  transform: scale(1.3);
+}
+/* This is the End for About Me Section Styling */
+/* This is the End for Projects Section Styling */
+.project-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 200px;
+}
+.project-section img {
+  width: 20px;
+}
+.project-section h2,
+h3,
+p,
+a {
+  font-family: "Open Sans", sans-serif;
+}
+.project-section p {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #b8bfd3;
+}
+.project-section h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #b8bfd3;
+  margin-top: 100px;
+}
+.project-section h3 {
+  color: #3d9d90;
+}
+.parent-project-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.project-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: start;
+  border: 2px solid #3d9d90;
+  border-radius: 10px;
+  width: 250px;
+  height: 300px;
+  flex-shrink: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+}
+.project-cards a {
+  margin-top: 50px;
+  padding: 8px;
+  border: 1px solid #3d9d90;
+  border-radius: 5px;
+  color: #b8bfd3;
+  font-size: 15px;
+}
+.project-cards a:hover {
+  background-color: #3d9d90;
+  color: #010101;
+}
+.project-icons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  gap: 5px;
+}
+/* This is the End for Projects Section Styling */
+/* This is the Start for Experience Section Styling*/
+.main-container-for-experience {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px;
+  margin-bottom: 50px;
+  color: #b8bfd3;
+  font-family: "Open Sans", sans-serif;
+}
+.main-container-for-experience h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  margin-top: 100px;
+}
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.timeline-item {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px 0;
+  position: relative;
+}
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.timeline-node {
+  background: #1e2734;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  border: 1px solid #3d9d90;
+}
+.timeline-item:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: #b8bfd3;
+  z-index: -1;
+}
+.timeline-item:nth-child(even):before {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+.timeline-content {
+  background: #0a192f;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  width: 45%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: left;
+  border: 2px solid #3d9d90;
+}
+.timeline-item:nth-child(even) .timeline-content {
+  text-align: right;
+}
+.timeline-item:after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  background: #b8bfd3;
+  z-index: -1;
+}
+.timeline-item:nth-child(even):after {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+.timeline-date {
+  font-size: 14px;
+  color: #8892b0;
+  margin-bottom: 10px;
+}
+.timeline-content h2 {
+  margin: 0;
+  color: #b8bfd3;
+  font-size: 18px;
+}
+/* This is the End for Experience Section Styling*/
+/* This is the Start for Forms Section Styling*/
+.forms-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+  padding-top: 100px;
+}
+.forms-section h3 {
+  font-size: 30px;
+  color: #dbe0ee;
+  font-family: "Open Sans", sans-serif;
+}
+.forms-section form {
+  width: 700px;
+}
+.forms-section input {
+  border: 2px solid #b8bfd3;
+  background-color: #10274b;
+  border-radius: 5px;
+  height: 30px;
+}
+.forms-section label {
+  color: #dbe0ee;
+  font-family: "Open Sans", sans-serif;
+}
+.labels-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  gap: 15px;
+}
+.labels-input a {
+  color: #b8bfd3;
+  text-decoration: none;
+  background-color: #3d9d90;
+  padding: 10px 10px;
+  border-radius: 5px;
+  align-self: center;
+}
+.labels-input a:hover {
+  color: #10274b;
+}
+.labels-input textarea {
+  height: 200px;
+  border: 2px solid #b8bfd3;
+  background-color: #10274b;
+  border-radius: 5px;
+}
+#form-submit {
+  color: #fff;
+}
+legend {
+  font-size: 20px;
+  color: #8892b0;
+  font-family: "Open Sans", sans-serif;
+}
+fieldset {
+  border: 3px solid #3d9d90;
+}
+@media (max-width: 700px) {
+  .forms-section form {
+    width: 100%;
+  }
+}
+input[type="text"],
+[type="email"],
+textarea[name="message"] {
+  color: #fff;
+}
+/* This is the End for Forms Section Styling */
+/* This is the Start for Footer Section Styling */
+.footer {
+  background-color: #0a192f;
+  color: #b8bfd3;
+  padding: 40px 20px;
+  text-align: center;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.footer-section {
+  flex: 1;
+  margin: 20px;
+  min-width: 200px;
+}
+.footer-section h4 {
+  color: #3d9d90;
+  margin-bottom: 20px;
+  font-family: "Roboto Slab", serif;
+}
+.footer-section p {
+  font-family: "Roboto Slab", serif;
+}
+.footer-section a {
+  color: #b8bfd3;
+  text-decoration: none;
+}
+.footer-section a:hover {
+  color: #3d9d90;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-section ul li {
+  margin: 10px 0;
+}
+.footer-section ul li a {
+  color: #b8bfd3;
+  text-decoration: none;
+  font-family: "Roboto Slab", serif;
+}
+.footer-section ul li a:hover {
+  color: #3d9d90;
+}
+.footer-bottom {
+  margin-top: 20px;
+}
+.footer-bottom p {
+  margin: 5px 0;
+  font-family: "Roboto Slab", serif;
+}
+.footer-bottom a {
+  color: #3d9d90;
+  text-decoration: none;
+}
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+.footer-section img {
+  width: 40px;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+.footer-section img:hover {
+  transform: scale(1.1);
+}
+.footer-section .newsletter form {
+  display: flex;
+  flex-direction: column;
+}
+.footer-section .newsletter input[type="email"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #b8bfd3;
+  border-radius: 5px;
+}
+.footer-section .newsletter button {
+  padding: 10px;
+  background-color: #3d9d90;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.footer-section .newsletter button:hover {
+  background-color: #2e796e;
+}
+/* This is the End for Footer Section Styling */
